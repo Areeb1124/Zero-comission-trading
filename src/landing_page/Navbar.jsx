@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav class="navbar navbar-expand-lg border-bottom " style={{ backgroundColor: "#FFF" }}>
       <div class="container p-2">
-        <a class="navbar-brand" href="#">
+        <Link class="navbar-brand" to="/">
           <img src="Media\Images\logo (1).svg" alt="Logo" style={{width:"25%"}}/>
-        </a>
+        </Link>
         <button
           class="navbar-toggler"
           type="button"
@@ -20,24 +21,24 @@ function Navbar() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link " aria-current="page" href="#">
+            <Link class="nav-link " aria-current="page" to="/signup">
               Signup
-            </a>
-            <a class="nav-link" href="#">
+            </Link>
+            <Link class="nav-link" to="/about">
               About
-            </a>
-            <a class="nav-link" href="#">
+            </Link>
+            <Link class="nav-link" to="/product">
               Product
-            </a>
-            <a class="nav-link" aria-disabled="true">
+            </Link>
+            <Link class="nav-link" aria-disabled="true" to="/pricing">
               Pricing 
-            </a>
-             <a class="nav-link" aria-disabled="true">
+            </Link>
+             <Link class="nav-link" aria-disabled="true" to="/support">
               Support 
-            </a>
-             <a class="nav-link" aria-disabled="true">
+            </Link>
+             <Link class="nav-link" aria-disabled="true">
                <i class="fa-solid fa-bars"></i>
-            </a> 
+            </Link> 
           </div>
         </div>
       </div>
