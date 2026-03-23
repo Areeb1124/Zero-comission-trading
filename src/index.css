@@ -88,3 +88,26 @@ button:focus-visible {
   width: 100%;
   z-index: 1050;
 }
+
+#supportHero{
+  background-color: rgb(56, 126, 209);
+  color: white;
+}
+
+#supportHero a{
+  color: white;
+}
+
+#supportWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 150px;
+}
+
+#supportHero input{
+  padding: 10px 50px;
+  width: 80%;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+}
