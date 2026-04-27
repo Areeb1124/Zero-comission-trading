@@ -1,9 +1,66 @@
-import React,{useState,useContext} from "react";
-import {Tooltip,Grow} from "@mui/material";
-import {watchlist} from "../Data/data.jsx";
-import {BarChartOutlined, KeyboardArrowDown,KeyboardArrowUp, MoreHoriz} from "@mui/icons-material";
+import React, { useState, useContext } from "react";
+import { Tooltip, Grow } from "@mui/material";
+import { watchlist } from "../Data/data.jsx";
+import { BarChartOutlined, KeyboardArrowDown, KeyboardArrowUp, MoreHoriz } from "@mui/icons-material";
 import GeneralContext from "./GeneralContext.jsx";
+import { Doughnut } from "react-chartjs-2";
+import { DoughnutChart } from "./DoughnoutChart.jsx";
+
+const labels = watchlist.map((subArray) => subArray["name"]);
+
 const WatchList = () => {
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Price",
+        data: watchlist.map((stock) => stock.price),
+        backgroundColor: [
+          "rgba(255, 99, 132, 0.5)",
+          "rgba(54, 162, 235, 0.5)",
+          "rgba(255, 206, 86, 0.5)",
+          "rgba(75, 192, 192, 0.5)",
+          "rgba(153, 102, 255, 0.5)",
+          "rgba(255, 159, 64, 0.5)",
+        ],
+        borderColor: [
+          "rgba(255, 99, 132, 1)",
+          "rgba(54, 162, 235, 1)",
+          "rgba(255, 206, 86, 1)",
+          "rgba(75, 192, 192, 1)",
+          "rgba(153, 102, 255, 1)",
+          "rgba(255, 159, 64, 1)",
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
+  //   export const data = {
+  //   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  //   datasets: [
+  //     {
+  //       label: '# of Votes',
+  //       data: [12, 19, 3, 5, 2, 3],
+  //       backgroundColor: [
+  //         'rgba(255, 99, 132, 0.2)',
+  //         'rgba(54, 162, 235, 0.2)',
+  //         'rgba(255, 206, 86, 0.2)',
+  //         'rgba(75, 192, 192, 0.2)',
+  //         'rgba(153, 102, 255, 0.2)',
+  //         'rgba(255, 159, 64, 0.2)',
+  //       ],
+  //       borderColor: [
+  //         'rgba(255, 99, 132, 1)',
+  //         'rgba(54, 162, 235, 1)',
+  //         'rgba(255, 206, 86, 1)',
+  //         'rgba(75, 192, 192, 1)',
+  //         'rgba(153, 102, 255, 1)',
+  //         'rgba(255, 159, 64, 1)',
+  //       ],
+  //       borderWidth: 1,
+  //     },
+  //   ],
+  // };
   return (
     <div className="watchlist-container">
       <div className="search-container">
@@ -19,10 +76,11 @@ const WatchList = () => {
 
 
       <ul className="list">
-         {watchlist.map((stock, index) => {
+        {watchlist.map((stock, index) => {
           return <WatchListItem stock={stock} key={index} />;
         })}
       </ul>
+      <DoughnutChart data={data} />
     </div>
   );
 };
@@ -54,15 +112,15 @@ const WatchListItem = ({ stock }) => {
           <span className="price">{stock.price}</span>
         </div>
       </div>
-       {ShowWatchlistActions && <WatchListActions uid={stock.name} />}
+      {ShowWatchlistActions && <WatchListActions uid={stock.name} />}
     </li>
   );
 };
 
 const WatchListActions = ({ uid }) => {
-   const generalContext = useContext(GeneralContext);
+  const generalContext = useContext(GeneralContext);
 
-   const handleBuyClick = () => {
+  const handleBuyClick = () => {
     generalContext.openBuyWindow(uid);
   };
 
