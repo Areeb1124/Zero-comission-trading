@@ -1,0 +1,14 @@
+node_modules/
+frontend/node_modules/
+dashboard/node_modules/
+backend/node_modules/
+
+.env
+frontend/.env
+dashboard/.env
+backend/.env
+
+dist/
+frontend/dist/
+dashboard/dist/
+backend/dist/
