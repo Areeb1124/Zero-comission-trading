@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Home from "./components/Home";
-import Register from "./components/Register";
-import Login from "./components/Login";
-import { ProtectedRoute } from "./components/ProtectedRoute";
+import Home from "./Components/Home";
+import Register from "./Components/Register";
+import Login from "./Components/Login";
+import { ProtectedRoute } from "./Components/ProtectedRoute";
 import { AuthProvider } from "./hooks/useAuth";
 
 
