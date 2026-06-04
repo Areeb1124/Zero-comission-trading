@@ -26,7 +26,7 @@ const BuyActionWindow = ({ uid }) => {
   
    const handleBuyClick = async () => {
     try {
-      const res = await axios.post("http://localhost:3002/newOrder", {
+      const res = await axios.post("https://zero-commission-backend.onrender.com/newOrder", {
         name: uid,
         qty: Number(stockQuantity),
         price: Number(stockPrice),
