@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Tooltip, Grow } from "@mui/material";
-import { watchlist } from "../Data/data.jsx";
+import { watchlist } from "../data/data.jsx";
 import { BarChartOutlined, KeyboardArrowDown, KeyboardArrowUp, MoreHoriz } from "@mui/icons-material";
 import GeneralContext from "./GeneralContext.jsx";
 import { Doughnut } from "react-chartjs-2";
