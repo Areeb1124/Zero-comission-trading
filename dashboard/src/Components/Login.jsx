@@ -39,7 +39,7 @@ export default function Login() {
     };
 
     try {
-      const res = await axios.post("http://localhost:3002/login", data, {
+      const res = await axios.post("https://zero-commission-backend.onrender.com/login", data, {
         headers: {
           "Content-Type": "application/json",
         },

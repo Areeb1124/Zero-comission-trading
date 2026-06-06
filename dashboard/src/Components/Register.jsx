@@ -45,7 +45,7 @@ export default function Register() {
     }
 
     try {
-      const res = await axios.post("http://localhost:3002/signup", data, {
+      const res = await axios.post("https://zero-commission-backend.onrender.com/signup", data, {
         headers: {
           "Content-Type": "application/json",
         },
