@@ -9,13 +9,13 @@ function OpenAccount() {
           Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and
           F&O trades.
         </p>
-        <button
+        <a
+          href="https://zero-commission-dashboard.netlify.app/register"
           className="p-1 btn btn-primary fs-5 mb-5 mt-3"
           style={{ width: "20%", margin: "0 auto" }}
         >
-          {" "}
           Signup Now
-        </button>
+        </a>
       </div>
     </div>
   );

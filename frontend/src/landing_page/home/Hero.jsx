@@ -8,11 +8,10 @@ function Hero() {
               <h1 className="mt-5">Invest in everything</h1>
               <p> Online platform to invest in stocks, derivatives, mutual funds, and
               more</p>
-              <button className='p-2 btn btn-primary fs-5 mb-5' style={{width: "20%",margin:"0 auto"}}> Signup Now</button>
+              <a href="https://zero-commission-dashboard.netlify.app/" className='p-2 btn btn-primary fs-5 mb-5' style={{width: "20%",margin:"0 auto"}}> Signup Now</a>
             </div>
         </div>
      );
 }
 
 export default Hero;
-<h1>Hero</h1>

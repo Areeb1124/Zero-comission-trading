@@ -21,9 +21,9 @@ function Navbar() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <Link class="nav-link " aria-current="page" to="/signup">
+            <a class="nav-link" href="https://zero-commission-dashboard.netlify.app/register">
               Signup
-            </Link>
+            </a>
             <Link class="nav-link" to="/about">
               About
             </Link>
